@@ -315,16 +315,20 @@ h1, h2, h3, h4, h5, h6 {
 
 section {
   width: 100%;
-  height: 220vh;
+  height: 400vh;
   background:
 url('./images/Background.jpeg');
-  background-size: cover;
+ 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
 }	
 section .leftBox {
   width: 100%;
   height: auto;
   float: left;
-  margin-top: 80px;
+  margin-top: 90px;
   padding: 50px;
   box-sizing: border-box;
   
@@ -345,47 +349,43 @@ section .leftBox .content h1 {
   padding: 0;
   font-size: 50px;
   text-transform: uppercase;
-  color:white;
+  color:black;
 }
 
 section .leftBox .content p {
   margin: 10px 0 0;
   padding: 0;
-  color:white;
+  color:black;
 }
 
-section .events {
-  position: relative;       
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.603);
-  float: center;
-  box-sizing: border-box;
+section .leftBox .content1 {
+  color: black;
+  background: white;
+  padding: 40px;
+  transition: .5s;
 }
 
-section .events ul {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  padding: 50px;
-  box-sizing: border-box;
+section .leftBox .content1 h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  text-transform: uppercase;
+  color:black;
 }
 
-section .events ul li {
-  list-style: none;
-  width: 800px;
-  background: #fff;
-  box-sizing: border-box;
-  height: auto;
-  margin: 15px 0;
+section .leftBox .content1 p {
+  margin: 10px 0 0;
+  padding: 0;
+  color:black;
 }
 
 
-section .events ul li .time {
+
+section .content1 .time {
   position: relative;
-  padding: 60px;       
+  padding: 35px;       
   margin-top: 30px;
-  background: #262626;
+  background: #faf9f9;
   box-sizing: border-box;
   width: 30%;
   height: 100%;
@@ -394,33 +394,32 @@ section .events ul li .time {
   transition: .5s;
 }
 
-
-section .events ul li:hover .time {
+/* 
+section .content1 .time {
   background: #0d6efd;
-}
+} */
 
 
-section .events ul li .time h2 {
+section .content1 .time h2 {
   position: absolute;
   margin: 0;
   padding: 0;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 45px;
+  color: black;
+  font-size: 35px;
   line-height: auto;
 }
 
 
-section .events ul li .time h2 span {
+section .content1 .time h2 span {
   font-size: 30px;
 }
 
 
-section .events ul li .details {
+section .content1 .details {
   padding: 20px;
-  background: #fff;
   box-sizing: border-box;
   width: 70%;
   height: 100%;
@@ -428,21 +427,21 @@ section .events ul li .details {
 }
 
 
-section .events ul li .details h3 {
+section .content1 .details h3 {
   position: relative;
   margin: 0;
   padding: 0;
   font-size: 22px;
 }
 
-section .events ul li .details p {
+section .content1 .details p {
   position: relative;
   margin: 10px 0 0;
   padding: 0;
   font-size: 16px;
 }
 
-section .events ul li .details a {
+section .content1 .details a {
   display: inline-block;
   text-decoration: none;
   padding: 10px 15px;
@@ -452,10 +451,31 @@ section .events ul li .details a {
   transition: .5s;
 }
 
-section .events ul li .details a:hover {
+section .content1 .details a:hover {
   background: #0d6efd;
   color: #fff;
   border-color: #0d6efd;
+}
+
+section .leftBox .content2 {
+  color: black;
+  padding: 40px;
+  transition: .5s;
+}
+
+section .leftBox .content2 h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:black;
+}
+
+section .leftBox .content2 p {
+  margin: 10px 0 0;
+  padding: 0;
+  color:black;
 }
 .sponsor{
   color: white;
@@ -503,35 +523,41 @@ section .events ul li .details a:hover {
   opacity: 0;
 }
 
-@media screen and (max-width: 500px) {
-  section .events, .time, .leftBox, .content, .details {
+@media screen and (max-width: 200px) {
+  section  .time, .leftBox, .content, .details {
     width: 100%;
     height:100%;
   }
 }
 
-@media screen and (max-width: 400px) {
-  section .leftBox  {
-    margin-top:-100%;
+@media screen  and (max-width : 200px){
+  section .main{
+    height:100%;
+    width:100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  section .leftBox , .content1 {
+    margin-top:-50px;
     width: 100%;
     margin-right: 10%;
     color:white;
   }
 }
-@media screen and (max-width: 800px) {
-  section .events ul li{
+@media screen and (max-width: 300px) {
+  section .content1{
     margin-bottom: -1%;
     width: 100%;
     height:auto;
     font-size: 10px;
   }
 }
-@media screen and (max-width: 800px) {
-  section .events ul li .time h2{ 
-    width: 100%;
-    font-size: 30px;
-  }
-}
+
 
 
 
